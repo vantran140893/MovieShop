@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fwE-t7-tlq">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--MovieShop-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="MoviesListViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Dbe-ME-Doj">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Dbe-ME-Doj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fQh-qo-EXJ"/>
+                            <constraint firstItem="Dbe-ME-Doj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="hdq-4m-eTU"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Dbe-ME-Doj" secondAttribute="bottom" id="tau-U9-pmG"/>
+                            <constraint firstAttribute="trailing" secondItem="Dbe-ME-Doj" secondAttribute="trailing" id="zff-Pi-Udq"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="MovieShop" id="Sd4-96-YXg"/>
+                    <connections>
+                        <outlet property="moviesTableView" destination="Dbe-ME-Doj" id="cvt-Et-YKe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2552.8000000000002" y="-46.326836581709152"/>
+        </scene>
+        <!--Marked Movies List View Controller-->
+        <scene sceneID="9Zc-9F-4Ne">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="u1K-Up-t3u" customClass="MarkedMoviesListViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3kH-G1-xmJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="GU8-m6-946"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="42f-NT-Dd4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Bm6-kg-BBs">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GU8-m6-946" firstAttribute="top" secondItem="Bm6-kg-BBs" secondAttribute="bottom" id="1lK-Ll-Gaa"/>
+                            <constraint firstItem="Bm6-kg-BBs" firstAttribute="top" secondItem="3kH-G1-xmJ" secondAttribute="bottom" id="4u2-Jy-M4k"/>
+                            <constraint firstItem="Bm6-kg-BBs" firstAttribute="leading" secondItem="42f-NT-Dd4" secondAttribute="leading" id="CPA-xh-gch"/>
+                            <constraint firstAttribute="trailing" secondItem="Bm6-kg-BBs" secondAttribute="trailing" id="NSy-iE-BCh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="L2Y-q7-vGS"/>
+                    <connections>
+                        <outlet property="markedMoviesTableView" destination="Bm6-kg-BBs" id="pgT-Np-3AJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t5Y-CR-2gS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2552.8000000000002" y="707.49625187406298"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="W4D-O0-6vL">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="fwE-t7-tlq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="AoC-lu-x1d">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Cgk-Gc-7Sx" kind="relationship" relationship="viewControllers" id="DxX-tS-cbd"/>
+                        <segue destination="fd5-jz-bNq" kind="relationship" relationship="viewControllers" id="fDL-Fw-ezL"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gIo-nN-Vpe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="302" y="271"/>
+        </scene>
+        <!--Movies-->
+        <scene sceneID="rBv-xM-vwE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Cgk-Gc-7Sx" customClass="BaseNavigationController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Movies" image="ic_movie" id="rYr-O3-0YT"/>
+                    <toolbarItems/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ky5-K7-Uqm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="XOg-4p-PEQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yxv-p3-euP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1613.5999999999999" y="-46.326836581709152"/>
+        </scene>
+        <!--Marked-->
+        <scene sceneID="duh-7U-dYc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fd5-jz-bNq" customClass="BaseNavigationController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Marked" image="ic_bookmark" id="A5b-Cs-E5q"/>
+                    <toolbarItems/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XGP-0t-LVe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="u1K-Up-t3u" kind="relationship" relationship="rootViewController" id="21z-Ni-DfJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zzl-m0-ky8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1613.5999999999999" y="707.49625187406298"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_bookmark" width="16" height="16"/>
+        <image name="ic_movie" width="16" height="16"/>
+    </resources>
+</document>

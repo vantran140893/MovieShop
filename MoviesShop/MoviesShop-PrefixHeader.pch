@@ -1,0 +1,26 @@
+//
+//  MoviesShop-PrefixHeader.pch
+//  MoviesShop
+//
+
+#ifndef MoviesShop_PrefixHeader_pch
+#define MoviesShop_PrefixHeader_pch
+
+#import "AppDelegate.h"
+#import "Constants.h"
+#import "HttpSessionManager.h"
+
+// category
+#import "UIImage+Color.h"
+#import "NSDictionary+Custom.h"
+#import "NSString+Custom.h"
+#import "NSNumber+Custom.h"
+#import "NSDate+Custom.h"
+#import "NSArray+Custom.h"
+
+// lib
+#import "CoreData+MagicalRecord.h"
+#import "AFNetworking.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+
+#endif /* MoviesShop_PrefixHeader_pch */
